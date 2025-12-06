@@ -1,8 +1,7 @@
 import streamlit as st
 import numpy as np
-import pandas as pd
 import time
-import plotly.express as px
+
 import cv2
 import json
 from utils.heatmap import apply_heatmap
@@ -45,4 +44,5 @@ st.subheader("Heatmap Overlay")
 
 frame = np.zeros((480,640,3),dtype=np.uint8)
 heatmap_frame = apply_heatmap(frame,points)
+
 st.image(heatmap_frame,channels="BGR")
